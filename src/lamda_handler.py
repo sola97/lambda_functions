@@ -1,4 +1,4 @@
-from app.adapters.lambda_adapter import LambdaAdapter
+from functions.device.adapters.lambda_adapter import LambdaAdapter
 
 
 def lambda_handler(event, context):

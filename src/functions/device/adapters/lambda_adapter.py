@@ -1,11 +1,11 @@
-from app.adapters.external_api_adapter import ExternalApiDeviceRepositoryAdapter
+from functions.device.adapters.external_api_adapter import ExternalApiDeviceRepositoryAdapter
 import json
 
-from app.adapters.response_converter_adapter import DeviceResponseConverterAdapterPort
-from app.data_models.request_data import DeviceFetchParam
-from app.data_models.response_data import DevicesResponse
-from app.domain.services import DeviceService
-from app.ports.api_port import ILambdaPort
+from functions.device.adapters.response_converter_adapter import DeviceResponseConverterAdapterPort
+from functions.device.data_models.request_data import DeviceFetchParam
+from functions.device.data_models.response_data import DevicesResponse
+from functions.device.domain.services import DeviceService
+from functions.device.ports.api_port import ILambdaPort
 
 
 class LambdaAdapter(ILambdaPort):

@@ -1,9 +1,9 @@
 from abc import ABC, abstractmethod
 from typing import List
 
-from app.data_models.request_data import DeviceFetchParam
-from app.data_models.response_data import DevicesResponse
-from app.domain.models import Device
+from functions.device.data_models.request_data import DeviceFetchParam
+from functions.device.data_models.response_data import DevicesResponse
+from functions.device.domain.models import Device
 
 
 class IDeviceServicePort(ABC):
