@@ -1,12 +1,6 @@
-import os
 import json
-import jsonschema
-import yaml
-import jsonschema
 
 from functions.device.adapters.external_api_adapter import ExternalApiDeviceRepositoryAdapter
-import json
-
 from functions.device.adapters.request_param_validate_adapter import RequestParamValidateAdapter
 from functions.device.adapters.response_converter_adapter import DeviceResponseConverterAdapterPort
 from functions.device.data_models.request_data import DeviceFetchParam

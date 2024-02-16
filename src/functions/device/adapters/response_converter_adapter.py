@@ -1,6 +1,7 @@
 from typing import List
 
-from functions.device.data_models.response_data import DevicesResponse, ServiceStatusResponse, DeviceErrorResponse, DeviceResponse
+from functions.device.data_models.response_data import DevicesResponse, ServiceStatusResponse, DeviceErrorResponse, \
+    DeviceResponse
 from functions.device.domain.models import Device
 from functions.device.ports.api_port import IDeviceResponseConverterPort
 

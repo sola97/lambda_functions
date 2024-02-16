@@ -1,9 +1,12 @@
-import httpx
 from typing import List
+
+import httpx
+
 from common.config import app_configs
 from common.logger import logger
-from functions.device.ports.api_port import IDeviceRepositoryPort
 from functions.device.domain.models import Device, DevicesResult
+from functions.device.ports.api_port import IDeviceRepositoryPort
+
 
 class ExternalApiDeviceRepositoryAdapter(IDeviceRepositoryPort):
 

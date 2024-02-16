@@ -1,10 +1,9 @@
-import base64
 import os
 
 import jsonschema
 import yaml
 
-from functions.device.ports.api_port import ILambdaPort, IRequestParamValidatePort
+from functions.device.ports.api_port import IRequestParamValidatePort
 
 
 class RequestParamValidateAdapter(IRequestParamValidatePort):

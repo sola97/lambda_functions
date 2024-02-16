@@ -1,4 +1,5 @@
 import os
+
 from starlette.config import Config
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
