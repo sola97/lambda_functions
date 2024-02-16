@@ -26,7 +26,12 @@ class IDeviceResponseConverterPort(ABC):
 
 
 class ILambdaPort(ABC):
-
     @abstractmethod
     def handle(self, event, context) -> dict:
+        pass
+
+
+class IRequestParamValidatePort(ABC):
+    @abstractmethod
+    def validate(self, event):
         pass

@@ -1,0 +1,17 @@
+$schema: "http://json-schema.org/draft-07/schema#"
+type: object
+properties:
+  user_id:
+    type: string
+    minLength: 1
+  Authorization:
+    type: string
+    minLength: 1
+  X-BOC-Owner-Id:
+    type: integer
+    minimum: 1
+    maximum: 2
+  Service-Program:
+    type: string
+    enum: ["brother_plus_us", "brother_plus_ca"] # 根据实际情况扩展
+required: ["user_id", "Authorization", "X-BOC-Owner-Id", "Service-Program"]

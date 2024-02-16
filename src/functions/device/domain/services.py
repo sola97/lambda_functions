@@ -1,8 +1,6 @@
 from functions.device.data_models.request_data import DeviceFetchParam
 from functions.device.data_models.response_data import DevicesResponse
 from functions.device.ports.api_port import IDeviceServicePort, IDeviceRepositoryPort, IDeviceResponseConverterPort
-from functions.device.domain.models import Device
-from typing import List
 
 
 class DeviceService(IDeviceServicePort):
