@@ -1,5 +1,6 @@
 from injector import Module, Binder, singleton
 from injector import Injector
+from functions.device.device_port import DeviceService
 from  functions.device.i_device_port import (IDeviceServicePort, IDeviceRepositoryPort,
                                     IDeviceResponseConverterPort)
 from .mock_device_port import MockDeviceRepositoryPort,MockDeviceResponseConverterPort
@@ -8,7 +9,7 @@ import pytest
 @pytest.fixture
 def device_service():
     injector = Injector([DeviceServiceTestModule()])
-    return injector.get(IDeviceServicePort)
+    return injector.get(DeviceService)
 
 class DeviceServiceTestModule(Module):
     def configure(self, binder: Binder) -> None:
