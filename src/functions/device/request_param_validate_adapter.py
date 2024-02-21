@@ -1,9 +1,7 @@
 import os
-
 import jsonschema
 import yaml
-
-from functions.device.ports.api_port import IRequestParamValidatePort
+from functions.device.i_device_port import IRequestParamValidatePort
 
 
 class RequestParamValidateAdapter(IRequestParamValidatePort):

@@ -1,14 +1,12 @@
 from typing import List
-
 import httpx
-
 from common.config import app_configs
 from common.logger import logger
-from functions.device.domain.models import Device, DevicesResult
-from functions.device.ports.api_port import IDeviceRepositoryPort
+from functions.device.device_entity import Device, DevicesResult
+from functions.device.i_device_port import IDeviceRepositoryPort
 
 
-class ExternalApiDeviceRepositoryAdapter(IDeviceRepositoryPort):
+class DeviceAdapter(IDeviceRepositoryPort):
 
     def get_devices(self, user_id: str) -> List[Device]:
         api_url = f"{app_configs.get('server_url')}/apis/v1/users/{user_id}/devices"

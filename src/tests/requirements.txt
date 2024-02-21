@@ -1,0 +1,20 @@
+# Amazon Web Services
+boto3 == 1.26.135
+
+# Dependency Injection
+injector == 0.20.1
+
+# Unit Testing
+moto == 4.1.9
+pytest == 7.3.1
+pytest-cov == 4.0.0
+pytest-mock == 3.10.0
+
+# Request Parameters Validation
+jsonschema == 4.17.3
+
+# Email Synchronization
+exchangelib == 5.0.3
+
+# Logger
+ddtrace == 1.13.3
