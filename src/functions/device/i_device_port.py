@@ -35,3 +35,8 @@ class IRequestParamValidatePort(ABC):
     @abstractmethod
     def validate(self, event):
         pass
+
+class ILambdaAdapterPort(ABC):
+    @abstractmethod
+    def handle_request(self, event):
+        pass
