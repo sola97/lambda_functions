@@ -1,5 +1,3 @@
-from injector import Injector
-import pytest
 from functions.device.request_data import DeviceFetchParam
 from .models_test import *
 

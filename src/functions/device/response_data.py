@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from typing import List, Optional
 
 @dataclass
@@ -18,10 +18,10 @@ class DeviceResponse:
     serialNumber: str
     model: str
     networkStatus: str
-    serviceStatus: List[ServiceStatusResponse] = field(default_factory=list)
-    deviceError: Optional[List[DeviceErrorResponse]] = None
+    serviceStatus: List[ServiceStatusResponse]
+    deviceError: Optional[List[DeviceErrorResponse]]
 
 @dataclass
 class DevicesResponse:
     message: str
-    devices: List[DeviceResponse] = field(default_factory=list)
+    devices: List[DeviceResponse]

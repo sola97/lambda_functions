@@ -4,7 +4,7 @@ import httpx
 from functions.device.device_adapter import DeviceAdapter
 from functions.device.device_entity import Device
 
-api_url = "https://example.com/apis/v1/users/user_1/devices"
+api_url = "http://127.0.0.1:8000/apis/v1/users/user_1/devices"
 mock_response_data = {
     "devices": [
         {"device_id": "1", "user_id": "user_1", "device_name": "Device 1"},

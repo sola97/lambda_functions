@@ -14,7 +14,7 @@ class IDeviceServicePort(ABC):
 
 class IDeviceRepositoryPort(ABC):
     @abstractmethod
-    def get_devices(self, user_id: str) -> List[Device]:
+    def get_devices(self, oauth_token: str) -> List[Device]:
         pass
 
 

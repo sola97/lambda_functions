@@ -9,5 +9,5 @@ class DeviceService(IDeviceServicePort):
         self.device_repository = device_repository
 
     def fetch_devices_for_user(self, param: DeviceFetchParam) -> DevicesResponse:
-        domain_devices = self.device_repository.get_devices(param.user_id)
+        domain_devices = self.device_repository.get_devices(param.oauth_token)
         return self.response_converter.convert(domain_devices)

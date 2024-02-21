@@ -5,15 +5,18 @@ from common.logger import logger
 from functions.device.device_entity import Device, DevicesResult
 from functions.device.i_device_port import IDeviceRepositoryPort
 
-
 class DeviceAdapter(IDeviceRepositoryPort):
 
-    def get_devices(self, user_id: str) -> List[Device]:
-        api_url = f"{app_configs.get('server_url')}/apis/v1/users/{user_id}/devices"
+    def get_devices(self, oauth_token: str) -> List[Device]:
+        api_url = app_configs.get('server_url')
+        headers = {
+            "Authorization": f"Bearer {oauth_token}",
+            "Content-Type": "application/json"
+        }
         try:
             with httpx.Client() as client:
-                logger.info(f"开始请求URL: {api_url}")
-                response = client.get(api_url)
+                logger.info(f"开始请求URL: {api_url} with OAuth token")
+                response = client.post(api_url, headers=headers)
                 if response.status_code == 200:
                     response_data = response.json()
                     return DevicesResult(**response_data).devices
