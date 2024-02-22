@@ -15,15 +15,13 @@ class DeviceResponseConverterAdapterPort(IDeviceResponseConverterPort):
                     for s in device.service_status
                 ]
 
-                # Mockup for deviceError, adjust according to your actual data structure
                 device_error = []
                 if device.status and device.status.alert:
-                    # Example transformation, assuming you'll adapt alert details to DeviceErrorResponse
                     for alert in device.status.alert:
                         device_error.append(DeviceErrorResponse(
-                            type="ErrorTypePlaceholder",  # Placeholder, adapt as necessary
-                            status="ErrorStatusPlaceholder",  # Placeholder, adapt as necessary
-                            detail="ErrorDetailPlaceholder"  # Placeholder, adapt as necessary
+                            type="ErrorTypePlaceholder",  
+                            status="ErrorStatusPlaceholder",
+                            detail="ErrorDetailPlaceholder"
                         ))
 
                 new_device = DeviceResponse(
@@ -42,3 +40,4 @@ class DeviceResponseConverterAdapterPort(IDeviceResponseConverterPort):
             )
 
             return new_response
+        

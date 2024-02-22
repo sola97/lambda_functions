@@ -1,4 +1,3 @@
-# lambda_adapter.py
 from functions.device.device_service import DeviceService
 from functions.device.i_device_port import ILambdaAdapterPort
 from functions.device.request_data import DeviceFetchParam
@@ -13,9 +12,7 @@ class LambdaAdapter(ILambdaAdapterPort):
         )
 
     def handle_request(self, event):
-        # 参数验证
         RequestParamValidateAdapter().validate(event)
         param = DeviceFetchParam(oauth_token=event['headers']['OAuth-Token'])
-        # 调用服务
         result = self.device_service.fetch_devices_for_user(param)
         return result

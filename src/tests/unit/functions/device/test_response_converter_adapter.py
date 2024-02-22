@@ -50,4 +50,3 @@ def test_convert_devices_to_devices_response():
     result = converter.convert([test_device_1, test_device_2])
     assert result.message == expected_devices_response.message
     assert len(result.devices) == len(expected_devices_response.devices)
-

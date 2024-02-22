@@ -17,7 +17,7 @@ class DeviceAdapter(IDeviceRepositoryPort):
             "Content-Type": "application/json"
         }
         try:
-            logger.info(f"开始请求URL: {api_url} with OAuth token")
+            logger.info(f"请求开始URL: {api_url} with OAuth token")
             response = self.client.post(api_url, headers=headers)
             if response.status_code == 200:
                 response_data = response.json()
