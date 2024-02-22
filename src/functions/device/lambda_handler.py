@@ -8,7 +8,7 @@ from functions.device.request_param_validate_adapter import RequestParamValidate
 from functions.device.response_converter_adapter import DeviceResponseConverterAdapterPort
 from functions.device.request_data import DeviceFetchParam
 from functions.device.response_data import DevicesResponse
-from functions.device.device_port import DeviceService
+from functions.device.device_service import DeviceService
 
 
 def lambda_handler(event, context):

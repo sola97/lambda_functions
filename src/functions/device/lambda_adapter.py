@@ -1,5 +1,5 @@
 # lambda_adapter.py
-from functions.device.device_port import DeviceService
+from functions.device.device_service import DeviceService
 from functions.device.i_device_port import ILambdaAdapterPort
 from functions.device.request_data import DeviceFetchParam
 from functions.device.request_param_validate_adapter import RequestParamValidateAdapter

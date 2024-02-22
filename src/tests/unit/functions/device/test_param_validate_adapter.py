@@ -3,12 +3,11 @@ from jsonschema import ValidationError
 
 from functions.device.request_param_validate_adapter import RequestParamValidateAdapter
 
-# 测试数据准备
 valid_event = {
     "headers": {
-        "OAuth-Token": "a" * 16,  # 16个字符长的字符串
+        "OAuth-Token": "a" * 16,
         "Authorization": "valid_authorization",
-        "X-BOC-Owner-Id": "1",  # 确保这是一个有效的ID
+        "X-BOC-Owner-Id": "1",
         "Service-Program": "brother_plus_us"
     }
 }
@@ -19,10 +18,10 @@ missing_param_event = {
 
 invalid_param_event = {
     "headers": {
-        "OAuth-Token": "short",  # 太短
-        "Authorization": "",  # 空字符串
-        "X-BOC-Owner-Id": "0",  # 无效的ID
-        "Service-Program": "invalid_program"  # 无效的枚举值
+        "OAuth-Token": "short",
+        "Authorization": "",
+        "X-BOC-Owner-Id": "0",
+        "Service-Program": "invalid_program"
     }
 }
 
@@ -39,6 +38,5 @@ def test_invalid_params(validator):
         validator.validate(invalid_param_event)
 
 def test_valid_params(validator):
-    # 应该不抛出异常
     validator.validate(valid_event)
 
