@@ -1,6 +1,5 @@
 from abc import ABC, abstractmethod
 from typing import List
-
 from functions.device.request_data import DeviceFetchParam
 from functions.device.response_data import DevicesResponse
 from functions.device.device_entity import Device
